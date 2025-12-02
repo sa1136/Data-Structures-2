@@ -1,25 +1,53 @@
-Data Structures
+# Data Structures & Algorithms
+
+
+
+This repository contains solutions to various coding interview problems.
+
+## Questions Solved
 
 1. Three Sum
+
 2. Longest Substring Without Repeating Characters
+
 3. Plus One
+
 4. Subsets
+
 5. Remove Duplicates from Sorted Array
+
 6. Max Consecutive Ones
+
 7. Fibonacci Number
+
 8. Max Area of Island
+
 9. Divide Array Into Arrays With Max Difference
+
 10. Isomorphic Strings
+
 11. Decode String
+
 12. Online Stock Span
+
 13. Move Zeroes
+
 14. Next Permutation
+
 15. Binary Tree Level Order Traversal
+
 16. Next Greater Element
+
 17. Add Two Numbers
+
 18. Count Trapezoids
+
 19. String to Integer (atoi)
+
 20. Split Array Largest Sum
+
 21. Longest Harmonious Subsequence
+
 22. Find All K-Distant Indices in an Array
+
 23. Search in Rotated Sorted Array
