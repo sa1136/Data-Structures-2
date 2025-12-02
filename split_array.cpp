@@ -1,0 +1,78 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Solution {
+
+
+
+public:
+
+    // Check how many subarrays are needed if max allowed sum is 'mid'
+
+    int countSubarrays(vector<int>& nums, long long mid) {
+
+        long long currSum = 0;
+
+        int count = 1; // at least one subarray
+
+        
+
+        for (int num : nums) {
+
+            if (currSum + num > mid) {  
+
+                // start a new subarray
+
+                count++;
+
+                currSum = num;
+
+            } else {
+
+                currSum += num;
+
+            }
+
+        }
+
+        return count;
+
+    }
+
+    int splitArray(vector<int>& nums, int k) {
+
+        long long left = *max_element(nums.begin(), nums.end());
+
+        long long right = accumulate(nums.begin(), nums.end(), 0LL);
+
+        while (left < right) {
+
+            long long mid = left + (right - left) / 2;
+
+            // How many subarrays needed if max allowed sum = mid
+
+            int subarrays = countSubarrays(nums, mid);
+
+            if (subarrays > k) {
+
+                // Too many splits → mid is too small
+
+                left = mid + 1;
+
+            } else {
+
+                // mid is valid, try reducing
+
+                right = mid;
+
+            }
+
+        }
+
+        return left; // or right, both meet at answer
+
+    }
+
+};
+
