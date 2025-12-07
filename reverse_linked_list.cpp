@@ -21,7 +21,8 @@ public:
 
     // Reverse a linked list iteratively
     // Uses three pointers: prev, curr, and nextNode
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through list, visit each node exactly once
+    // Space complexity: O(1) - only uses three pointer variables, no extra data structures
     ListNode* reverseList(ListNode* head) {
 
         ListNode* prev = nullptr;      // Will become the new head

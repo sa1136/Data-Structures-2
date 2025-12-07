@@ -11,7 +11,8 @@ public:
     // Find the maximum profit from buying and selling a stock
     // You can only buy once and sell once
     // Buy on day i, sell on day j where j > i
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through prices array, constant work per element
+    // Space complexity: O(1) - only uses two variables (mini and profit) regardless of input size
     int maxProfit(vector<int>& prices) {
 
         int n = prices.size();

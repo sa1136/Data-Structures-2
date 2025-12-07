@@ -11,7 +11,8 @@ public:
     // Calculate how much rainwater can be trapped between bars
     // Uses two-pointer approach with dynamic max tracking
     // Water trapped at position i = min(leftMax, rightMax) - height[i]
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through array, each bar processed once
+    // Space complexity: O(1) - only uses constant extra variables (left, right, leftMax, rightMax, water)
     int trap(vector<int>& height) {
 
         int l = 0;                      // Left pointer

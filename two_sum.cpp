@@ -11,7 +11,8 @@ public:
     // Find two numbers in the array that add up to target
     // Returns the indices of the two numbers
     // Uses hash map for O(1) lookup to achieve O(n) time complexity
-    // Time complexity: O(n), Space complexity: O(n)
+    // Time complexity: O(n) - single pass through array, hash map lookup/insert is O(1) average case
+    // Space complexity: O(n) - hash map stores at most n elements (one per array element)
     vector<int> twoSum(vector<int>& nums, int target) {
 
         int n = nums.size();

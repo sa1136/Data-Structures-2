@@ -7,7 +7,9 @@ class Solution {
 public:
     // Generate all possible subsets of an array (power set)
     // Uses iterative approach: start with empty subset and build up
-    // Time complexity: O(n * 2^n), Space complexity: O(n * 2^n) for output
+    // Time complexity: O(n * 2^n) - for each of n elements, we double the number of subsets (2^n total),
+    //                   and each subset copy operation takes O(n) time
+    // Space complexity: O(n * 2^n) for output - we store 2^n subsets, each of average length n/2
     vector<vector<int>> subsets(vector<int>& nums) {
         // Initialize result with empty subset
         vector<vector<int>> result = {{}};

@@ -10,7 +10,8 @@ public:
 
     // Compute the nth Fibonacci number using dynamic programming
     // F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2) for n > 1
-    // Time complexity: O(n), Space complexity: O(n)
+    // Time complexity: O(n) - iterate from 2 to n once, constant work per iteration
+    // Space complexity: O(n) - array of size n+1 to store all Fibonacci numbers up to n
     int fib(int n) {
 
         // Create array to store Fibonacci numbers up to n

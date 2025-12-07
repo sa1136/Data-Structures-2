@@ -15,7 +15,8 @@ public:
     // Calculate span for the current price
     // Returns the number of consecutive days (including today) where price <= today's price
     // Uses monotonic stack to efficiently compute spans
-    // Time complexity: O(1) amortized per call, Space complexity: O(n) where n is number of calls
+    // Time complexity: O(1) amortized per call - each price pushed/popped at most once across all calls
+    // Space complexity: O(n) where n is number of calls - stack can store all prices in worst case (decreasing sequence)
     int next(int price) {
         int span = 1;  // Start with span of 1 (current day)
         

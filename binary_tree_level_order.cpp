@@ -28,7 +28,9 @@ public:
     // Perform level-order traversal (BFS) of a binary tree
     // Returns a 2D vector where each inner vector represents a level of the tree
     // Uses queue to process nodes level by level
-    // Time complexity: O(n), Space complexity: O(n) for queue and output
+    // Time complexity: O(n) - each node is visited exactly once
+    // Space complexity: O(n) for queue and output - queue can hold at most all leaf nodes (n/2 in worst case),
+    //                   output stores all n nodes organized by level
     vector<vector<int>> levelOrder(TreeNode* root) {
         // Create a 2D vector to store levels
         vector<vector<int>> ans; 

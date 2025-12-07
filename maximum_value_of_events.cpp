@@ -18,7 +18,9 @@ public:
 
     // Dynamic programming function
     // Returns maximum value achievable from event i onwards with k_remaining events left
-    // Time complexity: O(n * k * log n), Space complexity: O(n * k)
+    // Time complexity: O(n * k * log n) - n*k subproblems, each requires O(log n) binary search 
+    //                   to find next non-overlapping event
+    // Space complexity: O(n * k) - memoization table of size n*(k+1) to store all subproblem results
     int dp(int i, int k_remaining) {
 
         // Base cases:

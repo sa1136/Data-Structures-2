@@ -11,7 +11,8 @@ public:
     // Find the single element that appears only once in a sorted array
     // All other elements appear exactly twice
     // Uses binary search with a clever index manipulation
-    // Time complexity: O(log n), Space complexity: O(1)
+    // Time complexity: O(log n) - binary search halves search space each iteration
+    // Space complexity: O(1) - only uses constant extra variables (left, right, mid)
     int singleNonDuplicate(vector<int>& nums) {
 
         int low = 0, high = nums.size() - 1;

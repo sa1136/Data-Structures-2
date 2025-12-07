@@ -10,7 +10,9 @@ public:
 
     // Find the maximum number by swapping at most one pair of digits
     // Uses greedy approach: swap the leftmost digit with the largest digit that appears later
-    // Time complexity: O(n) where n is number of digits, Space complexity: O(n)
+    // Time complexity: O(n) where n is number of digits - O(n) to find last occurrence of each digit,
+    //                   O(n) to find swap position
+    // Space complexity: O(n) - array of size 10 to store last occurrence indices, string conversion
     int maximumSwap(int num) {
 
         

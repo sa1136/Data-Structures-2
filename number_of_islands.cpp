@@ -48,7 +48,8 @@ public:
     // Count the number of islands in the grid
     // An island is formed by connecting adjacent lands (horizontally or vertically)
     // Uses DFS to mark each island completely
-    // Time complexity: O(m*n), Space complexity: O(m*n) for recursion stack
+    // Time complexity: O(m*n) - each cell visited at most once across all islands
+    // Space complexity: O(m*n) for recursion stack - worst case when entire grid is one island (deep recursion)
     int numIslands(vector<vector<char>>& grid) {
 
         if (grid.empty()) return 0;

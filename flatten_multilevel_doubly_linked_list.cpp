@@ -21,7 +21,8 @@ public:
 
     // DFS helper: flattens from 'node', returns the tail of the flattened segment
     // This allows us to connect the flattened child list to the rest of the list
-    // Time complexity: O(n), Space complexity: O(n) for recursion stack
+    // Time complexity: O(n) - each node visited exactly once during DFS traversal
+    // Space complexity: O(n) for recursion stack - worst case when list is a chain of child lists (deep recursion)
     Node* dfs(Node* node) {
 
         Node* curr = node;

@@ -11,7 +11,8 @@ public:
     // Find the length of the longest harmonious subsequence
     // A harmonious subsequence is one where the difference between 
     // the maximum and minimum element is exactly 1
-    // Time complexity: O(n), Space complexity: O(n)
+    // Time complexity: O(n) - two passes: O(n) to count frequencies, O(n) to check consecutive pairs
+    // Space complexity: O(n) - hash map stores at most n distinct numbers with their frequencies
     int findLHS(vector<int>& nums) {
 
         // Count frequency of each number in the array

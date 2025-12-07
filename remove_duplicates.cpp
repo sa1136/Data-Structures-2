@@ -6,7 +6,8 @@ class Solution {
 public:
     // Remove duplicates from sorted array in-place and return new length
     // Uses two-pointer technique: slow pointer tracks unique elements
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through array, each element visited once
+    // Space complexity: O(1) - only uses two pointers, no extra data structures
     int removeDuplicates(vector<int>& nums) {
         if (nums.empty()) {
             return 0;

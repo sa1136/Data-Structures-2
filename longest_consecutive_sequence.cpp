@@ -8,7 +8,8 @@ public:
     // Find the length of the longest consecutive sequence in the array
     // A consecutive sequence is a sequence of consecutive integers (e.g., 1, 2, 3, 4)
     // Uses hash set for O(1) lookup and only starts counting from sequence beginnings
-    // Time complexity: O(n), Space complexity: O(n)
+    // Time complexity: O(n) - each number visited at most twice (once in outer loop, once in inner while loop)
+    // Space complexity: O(n) - hash set stores all n distinct numbers from the array
     int longestConsecutive(vector<int>& nums) {
 
         // Store numbers in a set for O(1) lookup

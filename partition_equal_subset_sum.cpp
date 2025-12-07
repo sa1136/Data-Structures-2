@@ -11,7 +11,8 @@ public:
     // Check if the array can be partitioned into two subsets with equal sum
     // Uses dynamic programming approach
     // dp[index][target] = true if we can achieve 'target' sum using elements from index 0 to 'index'
-    // Time complexity: O(n * sum), Space complexity: O(n * sum)
+    // Time complexity: O(n * sum) - n elements, each can be checked against sum/2 possible target values
+    // Space complexity: O(n * sum) - DP table of size n * (sum/2 + 1) to store all subproblem results
     bool canPartition(vector<int>& nums) {
 
             int n = nums.size();

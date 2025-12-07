@@ -7,7 +7,8 @@ public:
     // Find the next greater element for each element in nums1
     // The next greater element is found in nums2
     // Uses monotonic stack to efficiently find next greater elements
-    // Time complexity: O(n + m) where n=len(nums1), m=len(nums2), Space complexity: O(m)
+    // Time complexity: O(n + m) - O(m) to process nums2 with stack, O(n) to build result from map
+    // Space complexity: O(m) - stack and hash map can store at most m elements from nums2
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         // Map to store next greater element for each number in nums2
         unordered_map<int, int> nextGreater;

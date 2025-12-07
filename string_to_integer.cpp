@@ -6,7 +6,8 @@ class Solution {
 public:
     // Convert string to integer (atoi implementation)
     // Handles leading spaces, signs, digits, and overflow cases
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through string, process each character once
+    // Space complexity: O(1) - only uses constant extra variables (sign, number, index)
     int myAtoi(string s) {
         int n = 1;         // sign decider 
         long long num = 0; // using long long to detect overflow of int

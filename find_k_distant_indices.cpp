@@ -11,7 +11,8 @@ public:
     // Find all indices i such that there exists at least one index j 
     // where nums[j] == key and |i - j| <= k
     // Uses marking approach: mark all valid ranges, then collect indices
-    // Time complexity: O(n^2) worst case, Space complexity: O(n)
+    // Time complexity: O(n^2) worst case - for each key occurrence, mark up to 2k+1 indices (could be n if k is large)
+    // Space complexity: O(n) - boolean array of size n to mark valid indices
     vector<int> findKDistantIndices(vector<int>& nums, int key, int k) {
 
         int n = nums.size();

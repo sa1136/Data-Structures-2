@@ -12,7 +12,8 @@ public:
     // Uses prefix sum and modulo arithmetic
     // Key insight: If two prefix sums have the same remainder mod k,
     // then the subarray between them is divisible by k
-    // Time complexity: O(n), Space complexity: O(k)
+    // Time complexity: O(n) - single pass through array, hash map operations are O(1) average case
+    // Space complexity: O(k) - hash map stores at most k different remainder values (0 to k-1)
     int subarraysDivByK(vector<int>& nums, int k) {
 
         // Map to count occurrences of each remainder

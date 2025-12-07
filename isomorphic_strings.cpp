@@ -8,7 +8,8 @@ public:
     // Two strings are isomorphic if characters in s can be replaced to get t
     // and vice versa, with no two characters mapping to the same character
     // Uses bidirectional mapping to ensure consistency
-    // Time complexity: O(n), Space complexity: O(1) - at most 256 characters
+    // Time complexity: O(n) - single pass through both strings, hash map operations are O(1)
+    // Space complexity: O(1) - hash maps store at most 256 character mappings (ASCII charset size)
     bool isIsomorphic(string s, string t) {
         // Strings must have same length to be isomorphic
         if(s.length() != t.length()) return false;

@@ -6,7 +6,8 @@ class Solution {
 public:
     // Move all zeros to the end while maintaining relative order of non-zero elements
     // Uses two-pointer technique: left pointer tracks position for next non-zero element
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through array, each element visited once
+    // Space complexity: O(1) - only uses constant extra variables (left pointer), in-place modification
     void moveZeroes(vector<int>& nums) {
         int left = 0; // position to place next non-zero element
         

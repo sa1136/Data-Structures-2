@@ -11,7 +11,8 @@ public:
     // Find the longest palindromic substring in the given string
     // Uses dynamic programming approach
     // dp[i][j] = true if substring s[i...j] is a palindrome
-    // Time complexity: O(n^2), Space complexity: O(n^2)
+    // Time complexity: O(n^2) - fill DP table with n*(n+1)/2 substrings, each checked in O(1)
+    // Space complexity: O(n^2) - DP table of size n*n to store all substring palindrome results
     string longestPalindrome(string s) {
 
         int n = s.size();

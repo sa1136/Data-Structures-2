@@ -7,7 +7,8 @@ public:
     // Divide array into groups of 3 where max difference in each group <= k
     // Returns empty array if it's not possible to form such groups
     // Uses greedy approach: sort and group consecutive elements
-    // Time complexity: O(n log n), Space complexity: O(n) for output
+    // Time complexity: O(n log n) - sorting dominates, then O(n) to process groups
+    // Space complexity: O(n) for output - stores n/3 groups, each with 3 elements
     vector<vector<int>> divideArray(vector<int>& nums, int k) {
         // Sort the array to make it easier to form groups
         sort(nums.begin(), nums.end());

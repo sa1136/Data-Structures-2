@@ -7,7 +7,8 @@ public:
     // Find the next lexicographically greater permutation
     // Modifies the array in-place to the next permutation
     // Algorithm: 1) Find pivot 2) Find successor 3) Swap 4) Reverse suffix
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - at most two passes: one to find pivot, one to reverse suffix
+    // Space complexity: O(1) - only uses constant extra variables, in-place modification
     void nextPermutation(vector<int>& nums) {
         int n = nums.size();
         int i = n - 2;

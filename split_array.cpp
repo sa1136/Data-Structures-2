@@ -10,7 +10,8 @@ public:
 
     // Check how many subarrays are needed if max allowed sum is 'mid'
     // Uses greedy approach: add elements until sum exceeds mid, then start new subarray
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through array, constant work per element
+    // Space complexity: O(1) - only uses constant extra variables (currSum, count)
     int countSubarrays(vector<int>& nums, long long mid) {
 
         long long currSum = 0;
@@ -43,7 +44,9 @@ public:
 
     // Find the minimum possible largest sum when splitting array into k subarrays
     // Uses binary search on answer: search for minimum max sum
-    // Time complexity: O(n * log(sum)), Space complexity: O(1)
+    // Time complexity: O(n * log(sum)) - binary search over sum range (log(sum) iterations), 
+    //                   each iteration calls countSubarrays which is O(n)
+    // Space complexity: O(1) - only uses constant extra variables for binary search
     int splitArray(vector<int>& nums, int k) {
 
         long long left = *max_element(nums.begin(), nums.end());

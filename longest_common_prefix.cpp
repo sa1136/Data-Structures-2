@@ -11,7 +11,8 @@ public:
     // Find the longest common prefix string amongst an array of strings
     // Uses a horizontal scanning approach
     // Start with the first string as prefix and shrink it by comparing with other strings
-    // Time complexity: O(S) where S is the sum of all characters, Space complexity: O(1)
+    // Time complexity: O(S) where S is the sum of all characters - in worst case, compare all characters
+    // Space complexity: O(1) - only uses constant extra space, prefix string is modified in-place
     string longestCommonPrefix(vector<string>& strs) {
 
     if (strs.empty()) return "";

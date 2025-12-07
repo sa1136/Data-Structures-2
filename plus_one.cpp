@@ -6,7 +6,8 @@ class Solution {
 public:
     // Add one to a number represented as an array of digits
     // Handles carry propagation from least significant to most significant digit
-    // Time complexity: O(n), Space complexity: O(1) excluding output array
+    // Time complexity: O(n) worst case - if all digits are 9, we traverse entire array and insert at beginning
+    // Space complexity: O(1) excluding output array - only uses constant extra space, output array may grow by 1
     vector<int> plusOne(vector<int>& digits) {
         int n = digits.size();
         

@@ -7,7 +7,8 @@ class Solution {
 public:
     // Find the maximum number of consecutive ones in a binary array
     // Uses single pass with counter to track current streak
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - iterate through array once, constant work per element
+    // Space complexity: O(1) - only uses two variables (count and maxCount) regardless of input size
     int findMaxConsecutiveOnes(vector<int>& nums) {
         int count = 0;     // Tracks current streak of consecutive ones
         int maxCount = 0;  // Tracks longest streak seen so far

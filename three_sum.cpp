@@ -6,7 +6,9 @@ class Solution {
 public:
     // Find all unique triplets in the array that sum to zero
     // Uses two-pointer technique after sorting
-    // Time complexity: O(n^2), Space complexity: O(1) excluding output array
+    // Time complexity: O(n^2) - O(n log n) for sorting + O(n^2) for nested loops (outer loop n times, 
+    //                   inner two-pointer scan O(n) each iteration)
+    // Space complexity: O(1) excluding output array - only uses constant extra space for pointers
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> result;
         

@@ -11,7 +11,8 @@ public:
     // Search for target in a 2D matrix
     // Matrix is sorted row-wise and each row is sorted in ascending order
     // Treats the 2D matrix as a 1D sorted array for binary search
-    // Time complexity: O(log(m*n)), Space complexity: O(1)
+    // Time complexity: O(log(m*n)) - binary search on flattened array of m*n elements
+    // Space complexity: O(1) - only uses constant extra variables (left, right, mid, row, col)
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
 
         int m = matrix.size();        // number of rows

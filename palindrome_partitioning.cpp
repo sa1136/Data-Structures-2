@@ -17,7 +17,8 @@ public:
     // Find all possible palindrome partitions of the string
     // Each partition is a list of palindromic substrings
     // Uses backtracking with memoization
-    // Time complexity: O(2^n * n), Space complexity: O(n) for recursion
+    // Time complexity: O(2^n * n) - exponential number of partitions (2^n), each requires O(n) to check palindrome
+    // Space complexity: O(n) for recursion - depth at most n, plus O(n) for path storage
     vector<vector<string>> partition(string s) {
 
         backtrack(0, s);

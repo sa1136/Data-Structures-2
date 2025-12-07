@@ -11,7 +11,8 @@ public:
     // Find the maximum sum of a contiguous subarray (Kadane's Algorithm)
     // Uses dynamic programming approach: at each index, decide whether to
     // extend the previous subarray or start a new one
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - single pass through the array, constant work per element
+    // Space complexity: O(1) - only uses two variables (currentSum and maxSum) regardless of input size
     int maxSubArray(vector<int>& nums) {
 
         // currentSum: best sum ending at current index

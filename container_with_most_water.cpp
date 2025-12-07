@@ -11,7 +11,8 @@ public:
     // Find the maximum area of water that can be contained between two lines
     // Uses two-pointer approach: start from both ends and move inward
     // Area = width * min(height[left], height[right])
-    // Time complexity: O(n), Space complexity: O(1)
+    // Time complexity: O(n) - each pointer visits each element at most once, total n-1 comparisons
+    // Space complexity: O(1) - only uses constant extra variables (left, right, max_area, etc.)
     int maxArea(vector<int>& height) {
 
         int left = 0;                  // start pointer (leftmost line)

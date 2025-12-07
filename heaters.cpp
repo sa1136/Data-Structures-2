@@ -12,7 +12,9 @@ public:
     // Each house must be within the radius of at least one heater
     // Returns the minimum radius such that all houses can be warmed
     // Uses binary search to find nearest heater for each house
-    // Time complexity: O(n log n + m log n) where n=heaters, m=houses, Space complexity: O(1)
+    // Time complexity: O(n log n + m log n) - O(n log n) to sort heaters, O(m log n) for m houses 
+    //                   each doing binary search (log n) to find nearest heater
+    // Space complexity: O(1) - only uses constant extra variables, sorting is in-place
     int findRadius(vector<int>& houses, vector<int>& heaters) {
 
         // Step 1: Sort both arrays to enable binary search
