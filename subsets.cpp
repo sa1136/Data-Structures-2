@@ -5,8 +5,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to generate all possible subsets of an array
+    // Generate all possible subsets of an array (power set)
     // Uses iterative approach: start with empty subset and build up
+    // Time complexity: O(n * 2^n), Space complexity: O(n * 2^n) for output
     vector<vector<int>> subsets(vector<int>& nums) {
         // Initialize result with empty subset
         vector<vector<int>> result = {{}};

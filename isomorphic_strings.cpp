@@ -4,9 +4,11 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to check if two strings are isomorphic
+    // Check if two strings are isomorphic
     // Two strings are isomorphic if characters in s can be replaced to get t
     // and vice versa, with no two characters mapping to the same character
+    // Uses bidirectional mapping to ensure consistency
+    // Time complexity: O(n), Space complexity: O(1) - at most 256 characters
     bool isIsomorphic(string s, string t) {
         // Strings must have same length to be isomorphic
         if(s.length() != t.length()) return false;

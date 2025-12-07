@@ -25,8 +25,10 @@ struct TreeNode {
 
 class Solution {
 public:
-    // Function to perform level-order traversal of a binary tree
+    // Perform level-order traversal (BFS) of a binary tree
     // Returns a 2D vector where each inner vector represents a level of the tree
+    // Uses queue to process nodes level by level
+    // Time complexity: O(n), Space complexity: O(n) for queue and output
     vector<vector<int>> levelOrder(TreeNode* root) {
         // Create a 2D vector to store levels
         vector<vector<int>> ans; 

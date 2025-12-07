@@ -4,7 +4,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to add one to a number represented as an array of digits
+    // Add one to a number represented as an array of digits
+    // Handles carry propagation from least significant to most significant digit
+    // Time complexity: O(n), Space complexity: O(1) excluding output array
     vector<int> plusOne(vector<int>& digits) {
         int n = digits.size();
         

@@ -11,6 +11,7 @@ public:
     // Search for target in a rotated sorted array using binary search
     // The array is rotated at some pivot point, so it's not fully sorted
     // but we can still use binary search by determining which half is sorted
+    // Time complexity: O(log n), Space complexity: O(1)
     int search(vector<int>& nums, int target) {
 
         int left = 0, right = nums.size() - 1;

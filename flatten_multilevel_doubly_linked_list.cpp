@@ -21,6 +21,7 @@ public:
 
     // DFS helper: flattens from 'node', returns the tail of the flattened segment
     // This allows us to connect the flattened child list to the rest of the list
+    // Time complexity: O(n), Space complexity: O(n) for recursion stack
     Node* dfs(Node* node) {
 
         Node* curr = node;
@@ -80,6 +81,8 @@ public:
 
     }
 
+    // Flatten a multilevel doubly linked list
+    // Time complexity: O(n), Space complexity: O(n) for recursion stack
     Node* flatten(Node* head) {
 
         if (head == nullptr) return head;

@@ -4,8 +4,10 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to find the next lexicographically greater permutation
+    // Find the next lexicographically greater permutation
     // Modifies the array in-place to the next permutation
+    // Algorithm: 1) Find pivot 2) Find successor 3) Swap 4) Reverse suffix
+    // Time complexity: O(n), Space complexity: O(1)
     void nextPermutation(vector<int>& nums) {
         int n = nums.size();
         int i = n - 2;

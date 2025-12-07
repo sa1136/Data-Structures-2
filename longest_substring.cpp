@@ -4,7 +4,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to find the length of the longest substring without repeating characters
+    // Find the length of the longest substring without repeating characters
+    // Uses sliding window technique with hash map to track last seen index
+    // Time complexity: O(n), Space complexity: O(min(n, m)) where m is charset size
     int lengthOfLongestSubstring(string s) {
         // Store last seen index of each ASCII character (256 possible ASCII characters)
         vector<int> lastIndex(256, -1);

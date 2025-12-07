@@ -22,6 +22,7 @@ public:
     // Nodes in the same column should be grouped together
     // Within the same column and row, nodes should be sorted by value
     // Uses DFS to collect nodes by column, then sorts by row and value
+    // Time complexity: O(n log n) due to sorting, Space complexity: O(n)
 
     // DFS helper function to traverse the tree and collect nodes by column
     // row: current depth/level in the tree

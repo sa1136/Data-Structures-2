@@ -15,8 +15,10 @@ struct ListNode {
 
 class Solution {
 public:
-    // Adds two numbers represented as reversed linked lists
+    // Add two numbers represented as reversed linked lists
     // Returns the head of a new linked list representing the sum
+    // Processes digits from least significant to most significant with carry handling
+    // Time complexity: O(max(m, n)) where m, n are lengths of lists, Space complexity: O(max(m, n))
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* dummy = new ListNode();  // Dummy node to simplify result building
         ListNode* res = dummy;             // Pointer used to return the actual head

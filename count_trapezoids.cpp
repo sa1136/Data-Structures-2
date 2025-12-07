@@ -4,9 +4,10 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to count the number of trapezoids that can be formed from given points
+    // Count the number of trapezoids that can be formed from given points
     // A trapezoid is formed by selecting 4 points where two pairs share the same y-coordinate
     // Uses combinatorics: count pairs of points with same y-coordinate, then count ways to select 2 pairs
+    // Time complexity: O(n^2), Space complexity: O(n)
     static int countTrapezoids(vector<vector<int>>& points) {
         const long long mod = 1e9 + 7;
         const int n = points.size();

@@ -4,8 +4,10 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to divide array into groups of 3 where max difference in each group <= k
+    // Divide array into groups of 3 where max difference in each group <= k
     // Returns empty array if it's not possible to form such groups
+    // Uses greedy approach: sort and group consecutive elements
+    // Time complexity: O(n log n), Space complexity: O(n) for output
     vector<vector<int>> divideArray(vector<int>& nums, int k) {
         // Sort the array to make it easier to form groups
         sort(nums.begin(), nums.end());

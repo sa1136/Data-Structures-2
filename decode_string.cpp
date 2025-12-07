@@ -4,9 +4,10 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to decode a string with pattern k[encoded_string]
+    // Decode a string with pattern k[encoded_string]
     // Example: "3[a]2[bc]" decodes to "aaabcbc"
     // Uses two stacks to handle nested brackets
+    // Time complexity: O(n * k) where n is string length and k is max repeat count, Space complexity: O(n)
     string decodeString(string s) {
         stack<int> numStack;      // Stack to store numbers (repeat counts)
         stack<string> strStack;    // Stack to store strings (previous strings)

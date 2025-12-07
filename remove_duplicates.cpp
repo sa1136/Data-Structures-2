@@ -4,7 +4,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Removes duplicates from sorted array in-place and returns new length
+    // Remove duplicates from sorted array in-place and return new length
+    // Uses two-pointer technique: slow pointer tracks unique elements
+    // Time complexity: O(n), Space complexity: O(1)
     int removeDuplicates(vector<int>& nums) {
         if (nums.empty()) {
             return 0;

@@ -9,7 +9,8 @@ class Solution {
 public:
 
     // Check how many subarrays are needed if max allowed sum is 'mid'
-
+    // Uses greedy approach: add elements until sum exceeds mid, then start new subarray
+    // Time complexity: O(n), Space complexity: O(1)
     int countSubarrays(vector<int>& nums, long long mid) {
 
         long long currSum = 0;
@@ -40,6 +41,9 @@ public:
 
     }
 
+    // Find the minimum possible largest sum when splitting array into k subarrays
+    // Uses binary search on answer: search for minimum max sum
+    // Time complexity: O(n * log(sum)), Space complexity: O(1)
     int splitArray(vector<int>& nums, int k) {
 
         long long left = *max_element(nums.begin(), nums.end());

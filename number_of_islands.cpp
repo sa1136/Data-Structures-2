@@ -8,6 +8,7 @@ public:
 
     // DFS helper function to mark all connected land cells as visited
     // Marks the entire island by converting '1' to '0'
+    // Time complexity: O(m*n), Space complexity: O(m*n) for recursion stack
     void dfs(vector<vector<char>>& grid, int r, int c) {
 
         int rows = grid.size();
@@ -47,6 +48,7 @@ public:
     // Count the number of islands in the grid
     // An island is formed by connecting adjacent lands (horizontally or vertically)
     // Uses DFS to mark each island completely
+    // Time complexity: O(m*n), Space complexity: O(m*n) for recursion stack
     int numIslands(vector<vector<char>>& grid) {
 
         if (grid.empty()) return 0;

@@ -5,7 +5,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Finds the maximum number of consecutive ones in a binary array
+    // Find the maximum number of consecutive ones in a binary array
+    // Uses single pass with counter to track current streak
+    // Time complexity: O(n), Space complexity: O(1)
     int findMaxConsecutiveOnes(vector<int>& nums) {
         int count = 0;     // Tracks current streak of consecutive ones
         int maxCount = 0;  // Tracks longest streak seen so far

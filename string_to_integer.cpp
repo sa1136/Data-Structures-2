@@ -4,8 +4,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to convert string to integer (atoi implementation)
+    // Convert string to integer (atoi implementation)
     // Handles leading spaces, signs, digits, and overflow cases
+    // Time complexity: O(n), Space complexity: O(1)
     int myAtoi(string s) {
         int n = 1;         // sign decider 
         long long num = 0; // using long long to detect overflow of int

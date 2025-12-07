@@ -11,6 +11,7 @@ public:
     // Find the largest lucky number in the array
     // A lucky number is a number that appears in the array exactly as many times as its value
     // Example: If 3 appears 3 times, it's a lucky number
+    // Time complexity: O(n), Space complexity: O(n)
     int findLucky(vector<int>& arr) {
 
         // Map to store frequency of each number

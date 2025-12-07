@@ -11,6 +11,7 @@ public:
     // Find the maximum free time by potentially removing and relocating one meeting
     // If a meeting can be moved to fit in an existing gap, we can merge adjacent gaps
     // Returns the maximum continuous free time achievable
+    // Time complexity: O(n log n), Space complexity: O(n)
     int maxFreeTime(int eventTime, vector<int>& startTime, vector<int>& endTime) {
 
         int n = startTime.size();

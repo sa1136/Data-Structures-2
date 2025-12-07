@@ -5,6 +5,8 @@ using namespace std;
 class Solution {
 public:
     // DFS to compute the area of one island
+    // Marks all connected land cells and counts them
+    // Time complexity: O(m*n) for each island, Space complexity: O(m*n) for visited array
     void dfs(vector<vector<int>>& grid, vector<vector<int>>& vis, int row, int col, int& area) {
         int m = grid.size(), n = grid[0].size();
         // Direction arrays: Up, Right, Down, Left
@@ -30,6 +32,9 @@ public:
         }
     }
 
+    // Find the maximum area of an island in the grid
+    // Uses DFS to explore each island and track maximum area
+    // Time complexity: O(m*n), Space complexity: O(m*n) for visited array
     int maxAreaOfIsland(vector<vector<int>>& grid) {
         int m = grid.size(), n = grid[0].size();
         // Visited array to track which cells we explored

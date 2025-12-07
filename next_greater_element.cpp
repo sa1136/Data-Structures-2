@@ -4,9 +4,10 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to find the next greater element for each element in nums1
+    // Find the next greater element for each element in nums1
     // The next greater element is found in nums2
     // Uses monotonic stack to efficiently find next greater elements
+    // Time complexity: O(n + m) where n=len(nums1), m=len(nums2), Space complexity: O(m)
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         // Map to store next greater element for each number in nums2
         unordered_map<int, int> nextGreater;

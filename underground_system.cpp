@@ -25,6 +25,7 @@ public:
     UndergroundSystem() {}
 
     // Record a customer check-in at a station
+    // Time complexity: O(1), Space complexity: O(1)
     void checkIn(int id, string stationName, int t) {
 
         // Record check-in details
@@ -35,6 +36,7 @@ public:
     }
 
     // Record a customer check-out and update route statistics
+    // Time complexity: O(1), Space complexity: O(1)
     void checkOut(int id, string stationName, int t) {
 
         // Retrieve start station and start time from check-in record
@@ -69,6 +71,7 @@ public:
     }
 
     // Calculate the average travel time for a given route
+    // Time complexity: O(1), Space complexity: O(1)
     double getAverageTime(string startStation, string endStation) {
 
         // Create route key to look up aggregated data

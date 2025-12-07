@@ -4,8 +4,9 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to move all zeros to the end while maintaining relative order of non-zero elements
+    // Move all zeros to the end while maintaining relative order of non-zero elements
     // Uses two-pointer technique: left pointer tracks position for next non-zero element
+    // Time complexity: O(n), Space complexity: O(1)
     void moveZeroes(vector<int>& nums) {
         int left = 0; // position to place next non-zero element
         

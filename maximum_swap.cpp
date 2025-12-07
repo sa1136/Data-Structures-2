@@ -10,6 +10,7 @@ public:
 
     // Find the maximum number by swapping at most one pair of digits
     // Uses greedy approach: swap the leftmost digit with the largest digit that appears later
+    // Time complexity: O(n) where n is number of digits, Space complexity: O(n)
     int maximumSwap(int num) {
 
         

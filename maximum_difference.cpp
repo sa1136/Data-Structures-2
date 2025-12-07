@@ -10,6 +10,8 @@ public:
 
     // Find the maximum difference between nums[j] and nums[i] where j > i and nums[j] > nums[i]
     // Returns -1 if no such pair exists
+    // Uses greedy approach with running minimum
+    // Time complexity: O(n), Space complexity: O(1)
     int maximumDifference(vector<int>& nums) {
 
         // We use the "running minimum" or "single-pass greedy" technique.

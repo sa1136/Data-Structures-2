@@ -12,8 +12,10 @@ public:
         // Constructor - initialize empty stack
     }
     
-    // Function to calculate span for the current price
+    // Calculate span for the current price
     // Returns the number of consecutive days (including today) where price <= today's price
+    // Uses monotonic stack to efficiently compute spans
+    // Time complexity: O(1) amortized per call, Space complexity: O(n) where n is number of calls
     int next(int price) {
         int span = 1;  // Start with span of 1 (current day)
         
